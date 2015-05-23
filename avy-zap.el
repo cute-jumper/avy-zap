@@ -141,7 +141,7 @@ Otherwise, don't rebind."
 (defun avy-zap-to-char-dwim (&optional prefix)
   "With PREFIX, call `avy-zap-to-char'.
 Without PREFIX, call `zap-to-char'."
-  (interactive)
+  (interactive "P")
   (if prefix
       (avy-zap-to-char)
     (call-interactively 'zap-to-char)))
@@ -156,7 +156,7 @@ Without PREFIX, call `zap-to-char'."
 (defun avy-zap-up-to-char-dwim (&optional prefix)
   "With PREFIX, call `avy-zap-up-to-char'.
 Without PREFIX, call `zap-up-to-char'."
-  (interactive)
+  (interactive "P")
   (if prefix
       (avy-zap-up-to-char)
     (call-interactively 'zap-up-to-char)))
