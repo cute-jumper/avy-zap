@@ -1,4 +1,7 @@
 #+TITLE: avy-zap
+[[http://melpa.org/#/avy-zap][file:http://melpa.org/packages/avy-zap-badge.svg]]
+[[http://stable.melpa.org/#/avy-zap][file:http://stable.melpa.org/packages/avy-zap-badge.svg]]
+
 Zap to char using [[https://github.com/abo-abo/avy][avy]].
 
 This package is basically a fork of the functionality of [[https://github.com/waymondo/ace-jump-zap][ace-jump-zap]], but using
@@ -7,6 +10,8 @@ This package is basically a fork of the functionality of [[https://github.com/wa
 * Setup
   : (add-to-list 'load-path "/path/to/avy-zap.el")
   : (require 'avy-zap)
+
+  Recommendation: install =avy-zap= via [[http://melpa.org][melpa]].
 
 * Usage
   Use =avy-zap-to-char= or =avy-zap-up-to-char= to perform =zap-to-char= or
