@@ -124,7 +124,8 @@ Otherwise, don't rebind."
 
 (defun avy-zap--internal (&optional zap-up-to-char-p)
   "If ZAP-UP-TO-CHAR-P, perform `zap-up-to-char'."
-  (let ((start (point)))
+  (let ((start (point))
+        avy-all-windows)
     (avy-zap--flet-if
         avy-zap-forward-only
         (window-start (&optional window) (point))
