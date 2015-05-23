@@ -13,9 +13,9 @@ This package is basically a fork of the functionality of [[https://github.com/wa
   =zap-up-to-char= in "avy-style"!
 
   There are two *Do-What-I-Mean* versions: =avy-zap-to-char-dwim= and
-  =avy-zap-up-to-char-dwim=. When called without prefix,
-  =avy-zap-(up-)to-char-dwim= will perform =zap-(up-)to-char=, and perform the
-  =avy-zap-(up-)to-char= with prefix.
+  =avy-zap-up-to-char-dwim=. =avy-zap-(up-)to-char-dwim= will perform
+  =zap-(up-)to-char= without prefix. If calling *dwim* versions with prefix,
+  then =avy-zap-(up-)to-char= will be used instead.
 
   You can give key bindings to these commands. For example:
   : (global-set-key (kbd "M-z") 'avy-zap-to-char-dwim)
@@ -24,7 +24,7 @@ This package is basically a fork of the functionality of [[https://github.com/wa
 * Customization
   - =avy-zap-forward-only=: Setting this variable to non-nil means zapping from
     the current point. The default value is =nil=.
-  - =avy-zap-function=: Choose between =kill-region= or =delete-region=. The
+  - =avy-zap-function=: Choose between =kill-region= and =delete-region=. The
     default value is =kill-region=.
 
 * Compared to ace-jump-zap

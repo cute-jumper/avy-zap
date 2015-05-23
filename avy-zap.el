@@ -50,9 +50,9 @@
 ;; or `zap-up-to-char' in "avy-style"!
 
 ;; There are two *Do-What-I-Mean* versions: `avy-zap-to-char-dwim' and
-;; `avy-zap-up-to-char-dwim'. When called without prefix,
-;; `avy-zap-(up-)to-char-dwim' will perform `zap-(up-)to-char', and
-;; perform the `avy-zap-(up-)to-char' with prefix.
+;; `avy-zap-up-to-char-dwim'. `avy-zap-(up-)to-char-dwim' will perform
+;; `zap-(up-)to-char' without prefix. If calling *dwim* versions with
+;; prefix, then `avy-zap-(up-)to-char' will be used instead.
 
 ;; You can give key bindings to these commands. For example:
 ;; ,----
