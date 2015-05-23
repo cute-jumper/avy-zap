@@ -17,6 +17,10 @@ This package is basically a fork of the functionality of [[https://github.com/wa
   =avy-zap-(up-)to-char-dwim= will perform =zap-(up-)to-char=, and perform the
   =avy-zap-(up-)to-char= with prefix.
 
+  You can give key bindings to these commands. For example:
+  : (global-set-key (kbd "M-z") 'avy-zap-to-char-dwim)
+  : (global-set-key (kbd "M-Z") 'avy-zap-up-to-char-dwim)
+
 * Customization
   - =avy-zap-forward-only=: Setting this variable to non-nil means zapping from
     the current point. The default value is =nil=.

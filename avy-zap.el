@@ -54,6 +54,12 @@
 ;; `avy-zap-(up-)to-char-dwim' will perform `zap-(up-)to-char', and
 ;; perform the `avy-zap-(up-)to-char' with prefix.
 
+;; You can give key bindings to these commands. For example:
+;; ,----
+;; | (global-set-key (kbd "M-z") 'avy-zap-to-char-dwim)
+;; | (global-set-key (kbd "M-Z") 'avy-zap-up-to-char-dwim)
+;; `----
+
 
 ;; 3 Customization
 ;; ===============
