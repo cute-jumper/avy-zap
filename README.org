@@ -1,0 +1,34 @@
+#+TITLE: avy-zap
+Zap to char using [[https://github.com/abo-abo/avy][avy]].
+
+This package is basically a fork of the functionality of [[https://github.com/waymondo/ace-jump-zap][ace-jump-zap]], but using
+[[https://github.com/abo-abo/avy][avy]] instead of [[https://github.com/winterTTr/ace-jump-mode][ace-jump-mode]] as the jumping method.
+
+* Setup
+  : (add-to-list 'load-path "/path/to/avy-zap.el")
+  : (require 'avy-zap)
+
+* Usage
+  Use =avy-zap-to-char= or =avy-zap-up-to-char= to perform =zap-to-char= or
+  =zap-up-to-char= in "avy-style"!
+
+  There are two cooresponding *Do-What-I-Mean* versions: =avy-zap-to-char-dwim=
+  and =avy-zap-up-to-char-dwim=. When called without prefix,
+  =avy-zap-(up-)to-char-dwim= will perform =zap-(up-)to-char=, and perform the
+  =avy-zap-(up-)to-char= with prefix.
+
+* Customization
+  - =avy-zap-forward-only=: Setting this variable to non-nil means zapping from
+    the current point.
+  - =avy-zap-function=: Choose between =kill-region= or =delete-region=. The
+    default value is =kill-region=.
+
+* Compared to ace-jump-zap
+  This package provides the same functionality as =ace-jump-zap=, but lacks the
+  =ajz/sort-by-closest= and =ajz/52-character-limit= customization options.
+  I don't use the sorting feature of =ace-jump-zap=, but if someone finds it
+  useful, welcome to submit a pull request!
+
+* Related packages
+  - [[https://github.com/waymondo/ace-jump-zap][ace-jump-zap]]
+  - [[https://github.com/abo-abo/avy][avy]]
