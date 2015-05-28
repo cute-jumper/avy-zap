@@ -111,15 +111,16 @@ Otherwise, don't rebind."
   (declare (indent 2))
   (let* ((name (car binding))
          (old (cl-gensym (symbol-name name))))
-    `(let ((,old (symbol-function ',name)))
-       (unwind-protect
-           (progn
-             (when ,rebind-p
-               (fset ',name (lambda ,@(cdr binding))))
-             ,@body)
-         (fset ',name ,old)))))
+    `(if ,rebind-p
+         (let ((,old (symbol-function ',name)))
+           (unwind-protect
+               (progn
+                 (fset ',name (lambda ,@(cdr binding)))
+                 ,@body)
+             (fset ',name ,old)))
+       ,@body)))
 
-(defun avy-zap--xor (a b)
+(defsubst avy-zap--xor (a b)
   "Exclusive-or of A and B."
   (if a (not b) b))
 
