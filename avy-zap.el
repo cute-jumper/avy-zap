@@ -131,14 +131,18 @@ Otherwise, don't rebind."
     (avy-zap--flet-if
         avy-zap-forward-only
         (window-start (&optional window) (point))
-      (funcall avy-zap-function start
-               (progn
-                 (call-interactively 'avy-goto-char)
-                 (when (avy-zap--xor
-                        (<= start (point))
-                        zap-up-to-char-p)
-                   (forward-char))
-                 (point))))))
+      (if (or (equal avy-zap-function 'kill-region)
+              (equal avy-zap-function 'delete-region))
+          (funcall avy-zap-function start
+                   (progn
+                     (call-interactively 'avy-goto-char)
+                     (when (avy-zap--xor
+                            (<= start (point))
+                            zap-up-to-char-p)
+                       (forward-char))
+                     (point)))
+        (error "Unknown value for `avy-zap-function'!\
+ Please choose between `kill-region' and `delete-region'")))))
 
 ;;;###autoload
 (defun avy-zap-to-char ()
