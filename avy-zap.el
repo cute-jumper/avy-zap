@@ -80,7 +80,9 @@
 ;;   There are two *Do-What-I-Mean* versions: `avy-zap-to-char-dwim' and
 ;;   `avy-zap-up-to-char-dwim'. `avy-zap-(up-)to-char-dwim' will perform
 ;;   `zap-(up-)to-char' with prefix. If calling *dwim* versions without
-;;   prefix, then `avy-zap-(up-)to-char' will be used instead.
+;;   prefix, then `avy-zap-(up-)to-char' will be used instead. The plain
+;;   `zap-(up-)to-char' will also be used when you are defining or
+;;   executing a macro.
 
 ;;   You can give key bindings to these commands. For example:
 ;;   ,----
