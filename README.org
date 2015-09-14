@@ -4,6 +4,10 @@
 
 Zap to char using [[https://github.com/abo-abo/avy][avy]].
 
+Note: The behaviors of the *dwim* function when called with prefix and without
+prefix are inverted now! By default(i.e. when the *dwim* function is called
+without prefix), the avy version will be used now!
+
 This package is basically a fork of the functionality of [[https://github.com/waymondo/ace-jump-zap][ace-jump-zap]], but using
 [[https://github.com/abo-abo/avy][avy]] instead of [[https://github.com/winterTTr/ace-jump-mode][ace-jump-mode]] as the jumping method.
 
@@ -19,7 +23,7 @@ This package is basically a fork of the functionality of [[https://github.com/wa
 
   There are two *Do-What-I-Mean* versions: =avy-zap-to-char-dwim= and
   =avy-zap-up-to-char-dwim=. =avy-zap-(up-)to-char-dwim= will perform
-  =zap-(up-)to-char= without prefix. If calling *dwim* versions with prefix,
+  =zap-(up-)to-char= with prefix. If calling *dwim* versions without prefix,
   then =avy-zap-(up-)to-char= will be used instead.
 
   You can give key bindings to these commands. For example:
