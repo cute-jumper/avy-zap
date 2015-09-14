@@ -182,7 +182,7 @@ Otherwise, don't rebind."
   "With PREFIX, call `avy-zap-to-char'.
 Without PREFIX, call `zap-to-char'."
   (interactive "P")
-  (if prefix
+  (if (or prefix defining-kbd-macro executing-kbd-macro)
       (progn (setq current-prefix-arg)
              (call-interactively 'zap-to-char))
     (avy-zap-to-char)))
@@ -198,7 +198,7 @@ Without PREFIX, call `zap-to-char'."
   "With PREFIX, call `avy-zap-up-to-char'.
 Without PREFIX, call `zap-up-to-char'."
   (interactive "P")
-  (if prefix
+  (if (or prefix defining-kbd-macro executing-kbd-macro)
       (progn (setq current-prefix-arg)
              (call-interactively 'zap-up-to-char))
     (avy-zap-up-to-char)))
