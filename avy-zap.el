@@ -181,8 +181,8 @@ Otherwise, don't rebind."
 
 ;;;###autoload
 (defun avy-zap-to-char-dwim (&optional prefix)
-  "With PREFIX, call `avy-zap-to-char'.
-Without PREFIX, call `zap-to-char'."
+  "Without PREFIX, call `avy-zap-to-char'.
+With PREFIX, call `zap-to-char'."
   (interactive "P")
   (if (or prefix defining-kbd-macro executing-kbd-macro)
       (progn (setq current-prefix-arg)
@@ -197,8 +197,8 @@ Without PREFIX, call `zap-to-char'."
 
 ;;;###autoload
 (defun avy-zap-up-to-char-dwim (&optional prefix)
-  "With PREFIX, call `avy-zap-up-to-char'.
-Without PREFIX, call `zap-up-to-char'."
+  "Without PREFIX, call `avy-zap-up-to-char'.
+With PREFIX, call `zap-up-to-char'."
   (interactive "P")
   (if (or prefix defining-kbd-macro executing-kbd-macro)
       (progn (setq current-prefix-arg)
