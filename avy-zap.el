@@ -184,13 +184,12 @@ Otherwise, don't rebind."
         (window-start (&optional window) (point))
       (if (or (equal avy-zap-function #'kill-region)
               (equal avy-zap-function #'delete-region))
-	  (progn
-            (call-interactively 'avy-goto-char)
-	    (when (avy-zap--xor (<= start (point)) zap-up-to-char-p)
-              (forward-char))
-	    (funcall avy-zap-function start (point)))
+	  (when (and (call-interactively 'avy-goto-char)
+		     (avy-zap--xor (<= start (point)) zap-up-to-char-p))
+            (forward-char))
+	(funcall avy-zap-function start (point)))
         (error "Unknown value for `avy-zap-function'!\
- Please choose between `kill-region' and `delete-region'")))))
+ Please choose between `kill-region' and `delete-region'"))))
 
 ;;;###autoload
 (defun avy-zap-to-char ()
